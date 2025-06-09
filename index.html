@@ -2,192 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rahul Yadav - Android Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rahul Yadav | Android Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background: #f4f6f9;
-      color: #333;
-      padding: 40px;
-    }
-
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      padding: 30px 40px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
-      animation: slideUp 1s ease-out;
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 0.8s ease-out forwards;
-      animation-delay: 0.3s;
-      margin-bottom: 30px;
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes slideUp {
-      from {
-        transform: translateY(50px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0px);
-        opacity: 1;
-      }
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
     }
 
     header {
+      background: linear-gradient(to right, #3b82f6, #9333ea);
+      padding: 60px 20px;
       text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #e0f2fe;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      background: #1e293b;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .card {
+      background: #1e293b;
+      border-radius: 16px;
+      padding: 30px;
       margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
     }
 
-    h1 {
-      font-size: 2.5em;
-      color: #1f2937;
+    .card:hover {
+      transform: scale(1.02);
     }
 
-    h2 {
-      font-size: 1.5em;
-      color: #3b82f6;
-      margin-bottom: 10px;
+    .card h3 {
+      margin-top: 0;
+      color: #60a5fa;
     }
 
-    h3 {
-      font-size: 1.3em;
-      color: #1d4ed8;
-      border-bottom: 2px solid #93c5fd;
-      padding-bottom: 5px;
-      margin-bottom: 10px;
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 16px;
     }
 
-    h4 {
-      font-size: 1.1em;
-      margin: 10px 0 4px;
-      color: #111827;
+    .skill {
+      background: #334155;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 500;
     }
 
-    p, ul {
-      margin: 8px 0;
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #94a3b8;
     }
 
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-
-    .job {
-      margin-bottom: 20px;
-    }
-
-    .job ul {
-      margin-top: 5px;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header class="fade-in">
-      <h1>Rahul Yadav</h1>
-      <h2>Android Developer</h2>
-      <p>Delhi, India | <a href="tel:+917017070404">(+91) 7017070404</a> | <a href="mailto:rahulyadav02052001@gmail.com">rahulyadav02052001@gmail.com</a></p>
-      <p><a href="https://github.com/rahulyadav07" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/rahul-yadav-726b48206" target="_blank">LinkedIn</a></p>
-    </header>
+  <header>
+    <h1>Rahul Yadav</h1>
+    <p>Creative Android Engineer | Kotlin & Jetpack Enthusiast</p>
+  </header>
 
-    <section class="fade-in">
-      <h3>Summary</h3>
-      <p>Experienced Android Developer with over 3.5 years of expertise in Kotlin, Jetpack Compose, and Java. Passionate about scalable applications, user experience, and security.</p>
-    </section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section class="fade-in">
+  <section id="about">
+    <div class="card">
+      <h3>About Me</h3>
+      <p>I’m an Android developer with 3.5+ years of experience building robust mobile apps. I'm passionate about UX, security, and performance. I love crafting seamless app experiences that scale and solve real problems.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="card">
       <h3>Skills & Tools</h3>
+      <div class="skills-grid">
+        <div class="skill">Kotlin</div>
+        <div class="skill">Java</div>
+        <div class="skill">Jetpack Compose</div>
+        <div class="skill">MVVM</div>
+        <div class="skill">Dagger</div>
+        <div class="skill">Retrofit</div>
+        <div class="skill">Room</div>
+        <div class="skill">Firebase</div>
+        <div class="skill">CI/CD</div>
+        <div class="skill">GraphQL</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="card">
+      <h3>BharatPe (2024 - Present)</h3>
       <ul>
-        <li><strong>Languages & Architecture:</strong> Kotlin, Java | MVVM, MVP, Clean Architecture</li>
-        <li><strong>UI Development:</strong> Jetpack Compose, Material Design, XML</li>
-        <li><strong>Tools:</strong> Git, Firebase, Jenkins, GitHub Actions, Profiler</li>
-        <li><strong>Libraries:</strong> Coroutines, Retrofit, Dagger, Room, Navigation</li>
-        <li><strong>Performance & Security:</strong> SSL Pinning, Obfuscation, R8, Proguard</li>
+        <li>Transformed payment flow to native; reduced failures by 30%</li>
+        <li>Implemented OAuth 2.0 and SSL Pinning for security</li>
+        <li>Revamped onboarding flow; improved retention by 15%</li>
       </ul>
-    </section>
-
-    <section class="fade-in">
-      <h3>Work Experience</h3>
-
-      <div class="job">
-        <h4>BharatPe – Software Engineer 2 (Android)</h4>
-        <p>Jan 2024 – Present, Gurugram</p>
-        <ul>
-          <li>Redesigned payment flow to native, reducing transaction failures by 30%.</li>
-          <li>Implemented OAuth 2.0, improved security and token refresh.</li>
-          <li>Enhanced onboarding journey, boosting retention by 15%.</li>
-          <li>SSL Pinning integration to prevent MITM attacks.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <h4>Stackfusion – Software Engineer (Android)</h4>
-        <p>Jul 2023 – Nov 2024, Gurugram</p>
-        <ul>
-          <li>Created UPI SDK with dynamic QR, cutting congestion by 40%.</li>
-          <li>Built offline ticketing, preventing data loss and fraud.</li>
-          <li>Integrated MQTT for real-time FASTag processing.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <h4>Rizzle – Software Engineer (Android)</h4>
-        <p>Sep 2021 – Feb 2023, Remote</p>
-        <ul>
-          <li>Developed log extraction for QA, speeding up testing.</li>
-          <li>Implemented beat-based video effects, increasing engagement.</li>
-          <li>Optimized network logic, improving preload success rate.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <h4>Coding Ninja – Java Teaching Assistant</h4>
-        <p>Feb 2021 – Jul 2023, Remote</p>
-        <ul>
-          <li>Mentored students in data structures and algorithms.</li>
-          <li>Improved test scores by 30% through direct guidance.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="fade-in">
-      <h3>Education</h3>
-      <p><strong>Dr. Bhimrao Ambedkar University</strong> – B.Sc. | CGPA: 7.5</p>
-    </section>
-
-    <section class="fade-in">
-      <h3>Achievements</h3>
+    </div>
+    <div class="card">
+      <h3>Stackfusion (2023 - 2024)</h3>
       <ul>
-        <li>2023 Gold Star Employee of the Month (UPI SDK Development at StackFusion)</li>
+        <li>Built UPI SDK with dynamic QR; cut congestion by 40%</li>
+        <li>Added MQTT-based real-time FASTag services</li>
+        <li>Offline ticketing system and QR printing</li>
       </ul>
-    </section>
-  </div>
+    </div>
+    <div class="card">
+      <h3>Rizzle (2021 - 2023)</h3>
+      <ul>
+        <li>Launched FilmiPlus2; boosted engagement by 25%</li>
+        <li>Developed log extraction & network analyzer tools</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:rahulyadav02052001@gmail.com">rahulyadav02052001@gmail.com</a></p>
+      <p>Phone: <a href="tel:+917017070404">+91 7017070404</a></p>
+      <p><a href="https://github.com/rahulyadav07" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/rahul-yadav-726b48206" target="_blank">LinkedIn</a></p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Rahul Yadav. All Rights Reserved.
+  </footer>
 </body>
 </html>
