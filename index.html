@@ -3,225 +3,216 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rahul Yadav | Android Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Rahul Yadav | Android Developer & Blogger</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, #0f172a, #1e293b);
+      font-family: 'Roboto', sans-serif;
+      background: #0f172a;
       color: #f1f5f9;
-      transition: background 0.4s ease;
-    }
-
-    body.scrolled {
-      background: linear-gradient(to bottom, #1e293b, #0f172a);
+      overflow-x: hidden;
     }
 
     header {
-      background: linear-gradient(to right, #3b82f6, #9333ea);
-      padding: 60px 20px;
+      background: #0e7490;
+      color: white;
+      padding: 80px 20px 60px;
       text-align: center;
+      position: relative;
     }
 
     header h1 {
+      font-family: 'Orbitron', sans-serif;
       font-size: 3rem;
       margin: 0;
+      letter-spacing: 1px;
     }
 
     header p {
       font-size: 1.2rem;
-      color: #e0f2fe;
+      margin-top: 10px;
     }
 
     nav {
+      position: sticky;
+      top: 0;
+      background: #164e63;
       display: flex;
       justify-content: center;
-      gap: 40px;
-      background: #1e293b;
+      gap: 30px;
       padding: 15px 0;
+      z-index: 1000;
     }
 
     nav a {
-      color: #93c5fd;
+      color: #facc15;
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.3s;
+      font-size: 1rem;
+      transition: transform 0.3s, color 0.3s;
     }
 
     nav a:hover {
-      color: #fff;
-      text-shadow: 0 0 10px #60a5fa;
+      color: #ffffff;
+      transform: scale(1.1);
     }
 
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
+    .container {
+      max-width: 1000px;
       margin: auto;
-      animation: fadeIn 1.5s ease;
+      padding: 40px 20px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: #38bdf8;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
     }
 
     .card {
       background: #1e293b;
-      border-radius: 16px;
-      padding: 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 12px;
+      padding: 20px;
+      transition: 0.3s ease;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.1);
     }
 
     .card:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 20px #60a5fa;
+      background: #334155;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
     }
 
     .card h3 {
+      color: #0ea5e9;
       margin-top: 0;
-      color: #60a5fa;
-      transition: color 0.3s;
-    }
-
-    .card:hover h3 {
-      color: #facc15;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 16px;
-    }
-
-    .skill {
-      background: #334155;
-      padding: 10px;
-      border-radius: 10px;
-      text-align: center;
-      font-weight: 500;
-      transition: transform 0.3s, background 0.3s;
-    }
-
-    .skill:hover {
-      transform: scale(1.1);
-      background: #64748b;
     }
 
     footer {
+      background: #0f172a;
       text-align: center;
-      padding: 40px;
       color: #94a3b8;
+      padding: 40px 20px;
+      font-size: 0.9rem;
     }
 
-    a.email-link {
+    .highlight {
       color: #facc15;
-      font-weight: bold;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    .blog-section {
+      background: #0e7490;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      margin-top: 60px;
+      border-radius: 12px;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Rahul Yadav</h1>
-    <p>Creative Android Engineer | Kotlin & Jetpack Enthusiast</p>
+    <p>Android Developer <span class="highlight">|</span> Problem Solver <span class="highlight">|</span> Future Blogger</p>
   </header>
 
   <nav>
     <a href="#about">About</a>
-    <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#blog">Blog</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
-    <div class="card">
-      <h3>About Me</h3>
-      <p>I’m an Android developer with 3.5+ years of experience building robust mobile apps. I'm passionate about UX, security, and performance. I love crafting seamless app experiences that scale and solve real problems.</p>
-    </div>
-  </section>
+  <div class="container">
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <p>I am Rahul Yadav, an experienced Android Developer with over 3.5 years of experience in building scalable, secure, and high-performance mobile applications. I specialize in Kotlin, Jetpack Compose, and Clean Architecture. I believe in writing clean code and love solving challenging problems.</p>
+    </section>
 
-  <section id="skills">
-    <div class="card">
-      <h3>Skills & Tools</h3>
-      <div class="skills-grid">
-        <div class="skill">Kotlin</div>
-        <div class="skill">Java</div>
-        <div class="skill">Jetpack Compose</div>
-        <div class="skill">MVVM</div>
-        <div class="skill">Dagger</div>
-        <div class="skill">Retrofit</div>
-        <div class="skill">Room</div>
-        <div class="skill">Firebase</div>
-        <div class="skill">CI/CD</div>
-        <div class="skill">GraphQL</div>
+    <section id="experience">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>BharatPe</h3>
+          <p><strong>Role:</strong> Software Engineer 2 (Android)</p>
+          <p><strong>Duration:</strong> Jan 2024 – Present</p>
+          <ul>
+            <li>Converted payment flow from web to native, reducing failures by 30%</li>
+            <li>Implemented secure OAuth 2.0 flow with token refresh</li>
+            <li>Redesigned onboarding, boosting retention by 15%</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Stackfusion</h3>
+          <p><strong>Role:</strong> Software Engineer (Android)</p>
+          <p><strong>Duration:</strong> Jul 2023 – Nov 2024</p>
+          <ul>
+            <li>Developed UPI SDK for QR code payments</li>
+            <li>Integrated MQTT for real-time FASTag updates</li>
+            <li>Enabled offline flow to avoid ticket loss</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Rizzle</h3>
+          <p><strong>Role:</strong> Software Engineer (Android)</p>
+          <p><strong>Duration:</strong> Sep 2021 – Feb 2023</p>
+          <ul>
+            <li>Built beat-synced video effects (FilmiPlus2)</li>
+            <li>Optimized video preloading by 30%</li>
+            <li>Introduced GraphQL-based data layers</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Coding Ninja</h3>
+          <p><strong>Role:</strong> Java Teaching Assistant</p>
+          <p><strong>Duration:</strong> Feb 2021 – Jul 2023</p>
+          <ul>
+            <li>Taught DSA and Java to 100+ students</li>
+            <li>Improved student performance by 30%</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="experience">
-    <div class="card">
-      <h3>BharatPe – Software Engineer 2 (Android)</h3>
-      <ul>
-        <li>Transformed the payment flow from web-based to native, reducing transaction failures by 30% and improving speed.</li>
-        <li>Implemented OAuth 2.0 for token management, enhancing security and ensuring smooth token refresh for millions of users.</li>
-        <li>Redesigned the onboarding journey, resulting in a 15% increase in user retention and streamlined sign-ups.</li>
-        <li>Developed analytics event tracking for permission management in BharatPe Merchant app, enhancing decision-making.</li>
-        <li>Enhanced security by implementing SSL pinning, mitigating MITM attack risks.</li>
-      </ul>
-    </div>
+    <section id="skills">
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="grid">
+        <div class="card"><h3>Kotlin</h3></div>
+        <div class="card"><h3>Java</h3></div>
+        <div class="card"><h3>Jetpack Compose</h3></div>
+        <div class="card"><h3>MVVM</h3></div>
+        <div class="card"><h3>Dagger</h3></div>
+        <div class="card"><h3>Retrofit</h3></div>
+        <div class="card"><h3>Room</h3></div>
+        <div class="card"><h3>Firebase</h3></div>
+        <div class="card"><h3>GraphQL</h3></div>
+      </div>
+    </section>
 
-    <div class="card">
-      <h3>Stackfusion – Software Engineer (Android)</h3>
-      <ul>
-        <li>Developed a UPI SDK for generating dynamic QR codes on POS and Android TV, reducing vehicle congestion by 40%.</li>
-        <li>Optimized Retrofit2 networking for ticket operations, improving operator efficiency by 30%.</li>
-        <li>Implemented MQTT for real-time FASTag transactions, saving 2 minutes per transaction on average.</li>
-        <li>Redesigned app architecture with MVVM, View Binding, and Room DB for 100% code reusability.</li>
-        <li>Enabled offline ticket storage during network issues, preventing data loss and fund embezzlement.</li>
-        <li>Designed QR-based ticket printing, reducing errors by 15%.</li>
-        <li>Used Dagger for dependency injection and NFC pass validation on SUNMI devices.</li>
-      </ul>
-    </div>
+    <section id="blog" class="blog-section">
+      <h2>Blog Coming Soon!</h2>
+      <p>I'm working on sharing insights, tutorials, and developer experiences. Stay tuned!</p>
+    </section>
 
-    <div class="card">
-      <h3>Rizzle – Software Engineer (Android)</h3>
-      <ul>
-        <li>Built log extraction tools for QA, reducing testing cycle time by 20%.</li>
-        <li>Engineered FilmiPlus2 feature with beat-based effect sync, boosting engagement by 25%.</li>
-        <li>Developed a network speed analyzer to optimize video quality and preloading success by 30%.</li>
-        <li>Revamped music UI and improved networking for a 20% performance boost.</li>
-        <li>Integrated GraphQL APIs for faster and more seamless data access.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Coding Ninja – Java Teaching Assistant</h3>
-      <ul>
-        <li>Taught students data structures and algorithms, improving assignment completion by 40%.</li>
-        <li>Provided one-on-one guidance, raising test scores by 30%.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="card">
-      <h3>Contact</h3>
-      <p>Email: <a class="email-link" href="mailto:rahulyadav02052001@gmail.com">rahulyadav02052001@gmail.com</a></p>
-      <p>Phone: <a href="tel:+917017070404">+91 7017070404</a></p>
-      <p><a href="https://github.com/rahulyadav07" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/rahul-yadav-726b48206" target="_blank">LinkedIn</a></p>
-    </div>
-  </section>
+    <section id="contact">
+      <h2 class="section-title">Get in Touch</h2>
+      <p>Email: <span class="highlight">rahulyadav02052001@gmail.com</span></p>
+      <p>Phone: +91 7017070404</p>
+      <p>GitHub: <a href="https://github.com/rahulyadav07" target="_blank" class="highlight">rahulyadav07</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/rahul-yadav-726b48206" target="_blank" class="highlight">rahul-yadav-726b48206</a></p>
+    </section>
+  </div>
 
   <footer>
-    &copy; 2025 Rahul Yadav. All Rights Reserved.
+    &copy; 2025 Rahul Yadav | Built with passion and future in mind.
   </footer>
-
-  <script>
-    window.addEventListener('scroll', () => {
-      document.body.classList.toggle('scrolled', window.scrollY > 50);
-    });
-  </script>
 </body>
 </html>
