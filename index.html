@@ -9,8 +9,13 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #0f172a;
+      background: linear-gradient(to bottom, #0f172a, #1e293b);
       color: #f1f5f9;
+      transition: background 0.4s ease;
+    }
+
+    body.scrolled {
+      background: linear-gradient(to bottom, #1e293b, #0f172a);
     }
 
     header {
@@ -46,6 +51,7 @@
 
     nav a:hover {
       color: #fff;
+      text-shadow: 0 0 10px #60a5fa;
     }
 
     section {
@@ -61,16 +67,22 @@
       padding: 30px;
       margin-bottom: 30px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .card:hover {
       transform: scale(1.02);
+      box-shadow: 0 0 20px #60a5fa;
     }
 
     .card h3 {
       margin-top: 0;
       color: #60a5fa;
+      transition: color 0.3s;
+    }
+
+    .card:hover h3 {
+      color: #facc15;
     }
 
     .skills-grid {
@@ -85,12 +97,23 @@
       border-radius: 10px;
       text-align: center;
       font-weight: 500;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .skill:hover {
+      transform: scale(1.1);
+      background: #64748b;
     }
 
     footer {
       text-align: center;
       padding: 40px;
       color: #94a3b8;
+    }
+
+    a.email-link {
+      color: #facc15;
+      font-weight: bold;
     }
 
     @keyframes fadeIn {
@@ -139,26 +162,45 @@
 
   <section id="experience">
     <div class="card">
-      <h3>BharatPe (2024 - Present)</h3>
+      <h3>BharatPe – Software Engineer 2 (Android)</h3>
       <ul>
-        <li>Transformed payment flow to native; reduced failures by 30%</li>
-        <li>Implemented OAuth 2.0 and SSL Pinning for security</li>
-        <li>Revamped onboarding flow; improved retention by 15%</li>
+        <li>Transformed the payment flow from web-based to native, reducing transaction failures by 30% and improving speed.</li>
+        <li>Implemented OAuth 2.0 for token management, enhancing security and ensuring smooth token refresh for millions of users.</li>
+        <li>Redesigned the onboarding journey, resulting in a 15% increase in user retention and streamlined sign-ups.</li>
+        <li>Developed analytics event tracking for permission management in BharatPe Merchant app, enhancing decision-making.</li>
+        <li>Enhanced security by implementing SSL pinning, mitigating MITM attack risks.</li>
       </ul>
     </div>
+
     <div class="card">
-      <h3>Stackfusion (2023 - 2024)</h3>
+      <h3>Stackfusion – Software Engineer (Android)</h3>
       <ul>
-        <li>Built UPI SDK with dynamic QR; cut congestion by 40%</li>
-        <li>Added MQTT-based real-time FASTag services</li>
-        <li>Offline ticketing system and QR printing</li>
+        <li>Developed a UPI SDK for generating dynamic QR codes on POS and Android TV, reducing vehicle congestion by 40%.</li>
+        <li>Optimized Retrofit2 networking for ticket operations, improving operator efficiency by 30%.</li>
+        <li>Implemented MQTT for real-time FASTag transactions, saving 2 minutes per transaction on average.</li>
+        <li>Redesigned app architecture with MVVM, View Binding, and Room DB for 100% code reusability.</li>
+        <li>Enabled offline ticket storage during network issues, preventing data loss and fund embezzlement.</li>
+        <li>Designed QR-based ticket printing, reducing errors by 15%.</li>
+        <li>Used Dagger for dependency injection and NFC pass validation on SUNMI devices.</li>
       </ul>
     </div>
+
     <div class="card">
-      <h3>Rizzle (2021 - 2023)</h3>
+      <h3>Rizzle – Software Engineer (Android)</h3>
       <ul>
-        <li>Launched FilmiPlus2; boosted engagement by 25%</li>
-        <li>Developed log extraction & network analyzer tools</li>
+        <li>Built log extraction tools for QA, reducing testing cycle time by 20%.</li>
+        <li>Engineered FilmiPlus2 feature with beat-based effect sync, boosting engagement by 25%.</li>
+        <li>Developed a network speed analyzer to optimize video quality and preloading success by 30%.</li>
+        <li>Revamped music UI and improved networking for a 20% performance boost.</li>
+        <li>Integrated GraphQL APIs for faster and more seamless data access.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Coding Ninja – Java Teaching Assistant</h3>
+      <ul>
+        <li>Taught students data structures and algorithms, improving assignment completion by 40%.</li>
+        <li>Provided one-on-one guidance, raising test scores by 30%.</li>
       </ul>
     </div>
   </section>
@@ -166,7 +208,7 @@
   <section id="contact">
     <div class="card">
       <h3>Contact</h3>
-      <p>Email: <a href="mailto:rahulyadav02052001@gmail.com">rahulyadav02052001@gmail.com</a></p>
+      <p>Email: <a class="email-link" href="mailto:rahulyadav02052001@gmail.com">rahulyadav02052001@gmail.com</a></p>
       <p>Phone: <a href="tel:+917017070404">+91 7017070404</a></p>
       <p><a href="https://github.com/rahulyadav07" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/rahul-yadav-726b48206" target="_blank">LinkedIn</a></p>
     </div>
@@ -175,5 +217,11 @@
   <footer>
     &copy; 2025 Rahul Yadav. All Rights Reserved.
   </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.body.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
 </body>
 </html>
