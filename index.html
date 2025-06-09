@@ -2,63 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Your Name | Portfolio</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
       color: #333;
     }
     header {
-      background-color: #111;
+      background-color: #24292e;
       color: white;
       padding: 2rem 1rem;
       text-align: center;
     }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-style: italic;
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      color: #bbb;
+    }
     .container {
-      padding: 2rem;
       max-width: 900px;
-      margin: auto;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
     }
     h2 {
       border-bottom: 2px solid #ddd;
       padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      color: #24292e;
     }
     .skills span {
       display: inline-block;
-      background-color: #333;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      margin: 0.3rem;
-      border-radius: 5px;
+      background-color: #0366d6;
+      color: white;
+      padding: 0.4rem 0.9rem;
+      margin: 0.3rem 0.5rem 0.3rem 0;
+      border-radius: 20px;
+      font-size: 0.9rem;
     }
     .project {
       margin-bottom: 1.5rem;
     }
+    .project h3 {
+      margin: 0 0 0.3rem 0;
+      color: #0366d6;
+    }
     .project a {
-      color: #007bff;
+      color: #0366d6;
+      text-decoration: none;
+    }
+    .project a:hover {
+      text-decoration: underline;
     }
     footer {
-      background-color: #222;
+      background-color: #24292e;
       color: white;
       text-align: center;
       padding: 1rem;
       margin-top: 3rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Your Name</h1>
-    <p>Short bio or tagline goes here</p>
+    <p>Short bio or tagline about yourself</p>
   </header>
 
   <div class="container">
     <section id="about">
       <h2>About Me</h2>
-      <p>Your detailed bio/introduction will go here. Talk about your interests, work, and goals.</p>
+      <p>Write a short intro about yourself here. Mention your passions, what you do, and your goals.</p>
     </section>
 
     <section id="skills">
@@ -76,14 +101,14 @@
       <div class="project">
         <h3>Project Title</h3>
         <p>Short description of the project.</p>
-        <a href="#">View on GitHub</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">View on GitHub</a>
       </div>
       <!-- Add more projects -->
     </section>
 
     <section id="experience">
       <h2>Experience</h2>
-      <p>Company Name - Role (Year-Year)</p>
+      <p>Company Name - Role (Year - Year)</p>
       <!-- Add more experience -->
     </section>
 
@@ -96,8 +121,8 @@
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-      <p>LinkedIn: <a href="#">linkedin.com/in/yourname</a></p>
-      <p>GitHub: <a href="#">github.com/yourusername</a></p>
+      <p>LinkedIn: <a href="#" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourname</a></p>
+      <p>GitHub: <a href="#" target="_blank" rel="noopener noreferrer">github.com/yourusername</a></p>
     </section>
   </div>
 
