@@ -2,187 +2,192 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rahul Yadav - Android Developer</title>
   <style>
-    /* Reset & basic */
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
     body {
-      background: linear-gradient(135deg, #1e1e2f, #3a3a5a);
-      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      background: #f4f6f9;
+      color: #333;
+      padding: 40px;
     }
+
     a {
-      color: #00d8ff;
+      color: #0066cc;
       text-decoration: none;
-      transition: color 0.3s ease;
     }
-    a:hover {
-      color: #00a1cc;
-    }
+
     .container {
       max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      margin: auto;
+      background: white;
+      padding: 30px 40px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      animation: slideUp 1s ease-out;
     }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease-out forwards;
+      animation-delay: 0.3s;
+      margin-bottom: 30px;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+
     header {
       text-align: center;
-      padding: 3rem 1rem 4rem;
-      background: rgba(0,0,0,0.25);
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,216,255,0.3);
-      margin-bottom: 2rem;
+      margin-bottom: 30px;
     }
-    header h1 {
-      font-size: 3.5rem;
-      letter-spacing: 2px;
-      margin-bottom: 0.3rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      text-shadow: 0 0 10px #00d8ff;
+
+    h1 {
+      font-size: 2.5em;
+      color: #1f2937;
     }
-    header p {
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: #a0f0ffcc;
-      font-style: italic;
+
+    h2 {
+      font-size: 1.5em;
+      color: #3b82f6;
+      margin-bottom: 10px;
     }
-    section {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 2rem 2.5rem;
-      border-radius: 10px;
-      margin-bottom: 2rem;
-      box-shadow: 0 0 10px rgba(0,216,255,0.1);
-      transition: box-shadow 0.3s ease;
+
+    h3 {
+      font-size: 1.3em;
+      color: #1d4ed8;
+      border-bottom: 2px solid #93c5fd;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
     }
-    section:hover {
-      box-shadow: 0 0 20px #00d8ff;
+
+    h4 {
+      font-size: 1.1em;
+      margin: 10px 0 4px;
+      color: #111827;
     }
-    section h2 {
-      margin-bottom: 1rem;
-      font-size: 2rem;
-      border-bottom: 2px solid #00d8ff;
-      display: inline-block;
-      padding-bottom: 0.3rem;
-      letter-spacing: 1.5px;
+
+    p, ul {
+      margin: 8px 0;
     }
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
     }
-    .skill {
-      background: #00d8ff;
-      color: #000;
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
-      font-weight: 600;
-      box-shadow: 0 0 5px #00b0cc;
-      transition: transform 0.3s ease;
-      cursor: default;
+
+    .job {
+      margin-bottom: 20px;
     }
-    .skill:hover {
-      transform: scale(1.1);
-    }
-    .projects > div {
-      margin-bottom: 1.5rem;
-    }
-    .projects h3 {
-      font-weight: 700;
-      font-size: 1.4rem;
-      color: #00e0ff;
-      margin-bottom: 0.3rem;
-    }
-    .projects a {
-      font-weight: 600;
-    }
-    footer {
-      text-align: center;
-      padding: 1.5rem 1rem;
-      background: rgba(0,0,0,0.25);
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      color: #00d8ffcc;
-      user-select: none;
-      border-top: 1px solid #00d8ff33;
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.5rem;
-      }
-      section {
-        padding: 1.5rem 1.5rem;
-      }
+
+    .job ul {
+      margin-top: 5px;
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>Your Name</h1>
-    <p>Creative Developer & Designer</p>
-  </header>
-
   <div class="container">
-    <section class="about">
-      <h2>About Me</h2>
-      <p>
-        Passionate developer with experience in modern web and mobile technologies.
-        I create clean, performant, and beautiful applications that users love.
-      </p>
+    <header class="fade-in">
+      <h1>Rahul Yadav</h1>
+      <h2>Android Developer</h2>
+      <p>Delhi, India | <a href="tel:+917017070404">(+91) 7017070404</a> | <a href="mailto:rahulyadav02052001@gmail.com">rahulyadav02052001@gmail.com</a></p>
+      <p><a href="https://github.com/rahulyadav07" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/rahul-yadav-726b48206" target="_blank">LinkedIn</a></p>
+    </header>
+
+    <section class="fade-in">
+      <h3>Summary</h3>
+      <p>Experienced Android Developer with over 3.5 years of expertise in Kotlin, Jetpack Compose, and Java. Passionate about scalable applications, user experience, and security.</p>
     </section>
 
-    <section class="skills">
-      <h2>Skills</h2>
-      <div class="skills-list">
-        <span class="skill">HTML</span>
-        <span class="skill">CSS</span>
-        <span class="skill">JavaScript</span>
-        <span class="skill">React</span>
-        <span class="skill">Kotlin</span>
-        <span class="skill">Node.js</span>
-        <span class="skill">Git</span>
+    <section class="fade-in">
+      <h3>Skills & Tools</h3>
+      <ul>
+        <li><strong>Languages & Architecture:</strong> Kotlin, Java | MVVM, MVP, Clean Architecture</li>
+        <li><strong>UI Development:</strong> Jetpack Compose, Material Design, XML</li>
+        <li><strong>Tools:</strong> Git, Firebase, Jenkins, GitHub Actions, Profiler</li>
+        <li><strong>Libraries:</strong> Coroutines, Retrofit, Dagger, Room, Navigation</li>
+        <li><strong>Performance & Security:</strong> SSL Pinning, Obfuscation, R8, Proguard</li>
+      </ul>
+    </section>
+
+    <section class="fade-in">
+      <h3>Work Experience</h3>
+
+      <div class="job">
+        <h4>BharatPe – Software Engineer 2 (Android)</h4>
+        <p>Jan 2024 – Present, Gurugram</p>
+        <ul>
+          <li>Redesigned payment flow to native, reducing transaction failures by 30%.</li>
+          <li>Implemented OAuth 2.0, improved security and token refresh.</li>
+          <li>Enhanced onboarding journey, boosting retention by 15%.</li>
+          <li>SSL Pinning integration to prevent MITM attacks.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h4>Stackfusion – Software Engineer (Android)</h4>
+        <p>Jul 2023 – Nov 2024, Gurugram</p>
+        <ul>
+          <li>Created UPI SDK with dynamic QR, cutting congestion by 40%.</li>
+          <li>Built offline ticketing, preventing data loss and fraud.</li>
+          <li>Integrated MQTT for real-time FASTag processing.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h4>Rizzle – Software Engineer (Android)</h4>
+        <p>Sep 2021 – Feb 2023, Remote</p>
+        <ul>
+          <li>Developed log extraction for QA, speeding up testing.</li>
+          <li>Implemented beat-based video effects, increasing engagement.</li>
+          <li>Optimized network logic, improving preload success rate.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h4>Coding Ninja – Java Teaching Assistant</h4>
+        <p>Feb 2021 – Jul 2023, Remote</p>
+        <ul>
+          <li>Mentored students in data structures and algorithms.</li>
+          <li>Improved test scores by 30% through direct guidance.</li>
+        </ul>
       </div>
     </section>
 
-    <section class="projects">
-      <h2>Projects</h2>
-      <div>
-        <h3>Project One</h3>
-        <p>React portfolio with smooth animations and modern UI.</p>
-        <a href="https://github.com/yourusername/project-one" target="_blank" rel="noreferrer">View on GitHub</a>
-      </div>
-      <div>
-        <h3>Project Two</h3>
-        <p>Android app built with Kotlin following Clean Architecture.</p>
-        <a href="https://github.com/yourusername/project-two" target="_blank" rel="noreferrer">View on GitHub</a>
-      </div>
+    <section class="fade-in">
+      <h3>Education</h3>
+      <p><strong>Dr. Bhimrao Ambedkar University</strong> – B.Sc. | CGPA: 7.5</p>
     </section>
 
-    <section class="experience">
-      <h2>Experience</h2>
-      <p><strong>Sunday Labs</strong> - Android Developer (2024 - Present)</p>
-      <p><strong>StackFusion</strong> - Software Engineer (2022 - 2024)</p>
-    </section>
-
-    <section class="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer">linkedin.com/in/yourprofile</a></p>
-      <p>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">github.com/yourusername</a></p>
+    <section class="fade-in">
+      <h3>Achievements</h3>
+      <ul>
+        <li>2023 Gold Star Employee of the Month (UPI SDK Development at StackFusion)</li>
+      </ul>
     </section>
   </div>
-
-  <footer>
-    &copy; 2025 Your Name. All rights reserved.
-  </footer>
-
 </body>
 </html>
